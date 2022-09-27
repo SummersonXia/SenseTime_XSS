@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1222</width>
+    <height>854</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="font">
+   <font>
+    <family>Agency FB</family>
+    <pointsize>9</pointsize>
+    <weight>75</weight>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>SenseAuto Cabin Smart Test Tool</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icon/senseauto_3.qrc">
+    <normaloff>:/senseauto/icon.PNG</normaloff>:/senseauto/icon.PNG</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="autoFillBackground">
+   <bool>true</bool>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>256</width>
+    <height>256</height>
+   </size>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
+  </property>
+  <property name="tabShape">
+   <enum>QTabWidget::Triangular</enum>
+  </property>
+  <property name="dockNestingEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="unifiedTitleAndToolBarOnMac">
+   <bool>true</bool>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="tabShape">
+       <enum>QTabWidget::Rounded</enum>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1222</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuGT">
+    <property name="title">
+     <string>功能/精度测试</string>
+    </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="title">
+      <string>统计展示</string>
+     </property>
+     <addaction name="action_csv_result"/>
+     <addaction name="action_display_statistics"/>
+    </widget>
+    <addaction name="action_Functions"/>
+    <addaction name="actionGenerate_GT"/>
+    <addaction name="action_runSDK"/>
+    <addaction name="action_loganalyze"/>
+    <addaction name="menu_3"/>
+   </widget>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+    <addaction name="actionNew_Project"/>
+    <addaction name="actionOpen_Project"/>
+    <addaction name="actionExit"/>
+    <addaction name="actionHelp"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>压力测试</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_display">
+    <property name="title">
+     <string>窗口</string>
+    </property>
+    <addaction name="action_win_hide"/>
+    <addaction name="action_win_activiate"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menuGT"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_display"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_4">
+   <property name="acceptDrops">
+    <bool>true</bool>
+   </property>
+   <property name="floating">
+    <bool>false</bool>
+   </property>
+   <property name="features">
+    <set>QDockWidget::AllDockWidgetFeatures</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllDockWidgetAreas</set>
+   </property>
+   <property name="windowTitle">
+    <string/>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_4">
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QTreeView" name="treeView">
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="lineWidth">
+        <number>3</number>
+       </property>
+       <property name="dragEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QTreeWidget" name="treeWidget_functions">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>1</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <column>
+        <property name="text">
+         <string>Functions</string>
+        </property>
+       </column>
+       <item>
+        <property name="text">
+         <string>DMS</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>FACEID</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Drowsiness</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>GAZEAOI</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Distraction</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>DMS Action</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>OMS</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>OMS Action</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Gender</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Age</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Emotion</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Child</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>PA</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Safety Seat</string>
+         </property>
+        </item>
+       </item>
+       <item>
+        <property name="text">
+         <string>GES</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>Static</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>Dynamic</string>
+         </property>
+        </item>
+       </item>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget_11">
+   <attribute name="dockWidgetArea">
+    <number>8</number>
+   </attribute>
+   <widget class="QWidget" name="dockWidgetContents_13">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QTextBrowser" name="Dialog_textBrowser">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>1</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionSSH">
+   <property name="text">
+    <string>SSH</string>
+   </property>
+  </action>
+  <action name="actionlog_analysis">
+   <property name="text">
+    <string>Analyze Log</string>
+   </property>
+  </action>
+  <action name="actionStatic_Gesture">
+   <property name="text">
+    <string>Static Gesture</string>
+   </property>
+  </action>
+  <action name="actionDynamic_Gesture">
+   <property name="text">
+    <string>Dynamic Gesture</string>
+   </property>
+  </action>
+  <action name="actionChild_Detection">
+   <property name="text">
+    <string>OMS Child</string>
+   </property>
+  </action>
+  <action name="actionOMS_Action">
+   <property name="text">
+    <string>OMS Action</string>
+   </property>
+  </action>
+  <action name="actionOMS_Safety_Belt">
+   <property name="text">
+    <string>OMS Safety Belt</string>
+   </property>
+  </action>
+  <action name="actionOMS_PA">
+   <property name="text">
+    <string>OMS PA</string>
+   </property>
+  </action>
+  <action name="actionOMS_Attribute">
+   <property name="text">
+    <string>OMS Attribute</string>
+   </property>
+  </action>
+  <action name="actionFACE_ID">
+   <property name="text">
+    <string>DMS FACEID</string>
+   </property>
+  </action>
+  <action name="actionDMS_Action">
+   <property name="text">
+    <string>DMS Action</string>
+   </property>
+  </action>
+  <action name="actionDMS_GAZEAOI">
+   <property name="text">
+    <string>DMS GAZEAOI</string>
+   </property>
+  </action>
+  <action name="action_win_activiate">
+   <property name="text">
+    <string>激活</string>
+   </property>
+  </action>
+  <action name="action_openfile">
+   <property name="text">
+    <string>Open File</string>
+   </property>
+  </action>
+  <action name="action_savefile">
+   <property name="text">
+    <string>Save File</string>
+   </property>
+  </action>
+  <action name="actionNew_Project">
+   <property name="text">
+    <string>新建项目</string>
+   </property>
+  </action>
+  <action name="action_win_hide">
+   <property name="text">
+    <string>隐藏</string>
+   </property>
+  </action>
+  <action name="actionOpen_Project">
+   <property name="text">
+    <string>打开项目</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionHelp">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="action_Functions">
+   <property name="text">
+    <string>功能选择</string>
+   </property>
+  </action>
+  <action name="action_Functions_log">
+   <property name="text">
+    <string>Functions</string>
+   </property>
+  </action>
+  <action name="action_Functions_script">
+   <property name="text">
+    <string>Functions</string>
+   </property>
+  </action>
+  <action name="actionRun_Script">
+   <property name="text">
+    <string>Run Script</string>
+   </property>
+  </action>
+  <action name="actionGenerate_GT">
+   <property name="text">
+    <string>gt管理</string>
+   </property>
+  </action>
+  <action name="actionMCU_Connection_Settings">
+   <property name="text">
+    <string>MCU Connection Settings</string>
+   </property>
+  </action>
+  <action name="action_runSDK">
+   <property name="text">
+    <string>SDK运行管理</string>
+   </property>
+  </action>
+  <action name="action_loganalyze">
+   <property name="text">
+    <string>日志分析</string>
+   </property>
+  </action>
+  <action name="action_csv_result">
+   <property name="text">
+    <string>文件选择</string>
+   </property>
+  </action>
+  <action name="action_display_statistics">
+   <property name="text">
+    <string>统计分析</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icon/senseauto_3.qrc"/>
+ </resources>
+ <connections/>
+</ui>
