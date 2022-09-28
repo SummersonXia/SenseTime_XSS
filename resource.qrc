@@ -1,0 +1,5 @@
+<RCC>
+ <qresource prefix = "/">
+   <file>sensetime.ico</file>
+ </qresource>
+</RCC>
